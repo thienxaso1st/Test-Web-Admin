@@ -14,7 +14,7 @@ config.ResponsiveBootstrapToolkitVisibilityDivs = {
     lg: $('<div class="device-lg hidden-md-down hidden-xl-up"></div>'),
     xl: $('<div class="device-xl hidden-lg-down\t\t\t  "></div>')
 }, ResponsiveBootstrapToolkit.use("Custom", config.ResponsiveBootstrapToolkitVisibilityDivs), config.validations = {
-    debug: !0,
+    debug: 0,
     errorClass: "has-error",
     validClass: "success",
     errorElement: "span",
