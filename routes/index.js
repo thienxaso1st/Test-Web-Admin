@@ -5,7 +5,10 @@ const router = express.Router();
 /* GET home page. */
 
 router.get('/', function (req, res, next) {
-    res.render('index', {title: 'TNKStore'});
+    res.render('auth/login', {
+        title: 'Sign in',
+        layout: false
+    });
 });
 
 module.exports = router;
