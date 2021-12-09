@@ -37,8 +37,8 @@ app.use(function (req, res, next) {
   next();
 })
 
-//app.use('/', indexRouter);
-app.use('/', authRouter);
+app.use('/', indexRouter);
+//app.use('/', authRouter);
 app.use('/users', usersRouter);
 app.use('/account', loggedInUserGuard, accountRouter);
 app.use('/dashboard', loggedInUserGuard, dashboardRouter);
