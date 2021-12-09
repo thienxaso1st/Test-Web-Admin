@@ -4,14 +4,14 @@ const authController = require('./authController');
 const passport = require('../../passport');
 
 /* GET home page. */
-//router.get('/', function (req, res, next) {
-    //res.redirect('/admin/login');
-//});
+router.get('/', function (req, res, next) {
+    res.redirect('/admin/login');
+});
 
-router.get('/', authController.login);
-router.post('/', passport.authenticate('local', {
+router.get('/login', authController.login);
+router.post('/login', passport.authenticate('local', {
     successRedirect: '/dashboard',
-    failureRedirect: '/?wrong-password',
+    failureRedirect: '/admin/login?wrong-password',
 }));
 
 router.get('/logout', authController.logout);
